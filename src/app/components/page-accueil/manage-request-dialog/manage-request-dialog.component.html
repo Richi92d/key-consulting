@@ -1,0 +1,30 @@
+<h3 mat-dialog-title class="dialog-title">{{isUpdate ? 'Modifier': 'Ajouter'}} une demande d'autorisation</h3>
+<mat-dialog-content class="dialog-content">
+    <form [formGroup]="form">
+
+        <!-- Projet de travaux -->
+        <mat-form-field appearance="outline">
+            <mat-label>Projet de travaux</mat-label>
+            <input matInput formControlName="work" required maxlength="15">
+        </mat-form-field>
+
+        <!-- Utilisateur -->
+        <mat-form-field appearance="outline">
+            <mat-label>Utilisateur</mat-label>
+            <input matInput formControlName="user" required maxlength="15">
+        </mat-form-field>
+
+        <!-- Contrat -->
+        <mat-form-field appearance="outline" class="custom-border">
+            <mat-label>Contrat</mat-label>
+            <input matInput type="text" formControlName="contract" maxlength="10">
+        </mat-form-field>
+
+    </form> 
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-action">
+    <button mat-stroked-button mat-dialog-close class="cancel-button" (click)="cancel()">Annuler</button>
+    <button mat-flat-button mat-dialog class="add-button" (click)="save()" [disabled]="!form.valid">
+        {{isUpdate ? 'Modifier' : 'Creér'}}
+    </button>
+</mat-dialog-actions>

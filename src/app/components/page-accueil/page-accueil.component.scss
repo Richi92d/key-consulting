@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.25rem;
+        width: 54%;
+
+        h2 {
+            margin: 0 0 0.3125rem 0;
+            font: normal 1.25rem/2.375rem "Poppins";
+            color: #121926;
+            width: 12.5625rem;
+            height: 1.35rem;
+        }
+
+        p {
+            font: normal 0.875rem/2.375rem "Inter";
+            color: #4b5565;
+            margin: 0;
+        }
+
+        .add-button {
+            background-color: #1976d2;
+            color: white;
+            align-self: center;
+            height: 2.5625rem;
+            border-radius: 0.3125rem;
+        }
+    }
+
+    .request-card {
+        display: flex;
+        flex-direction: column;
+        padding: 0.9375rem;
+        width: 53.8125rem;
+        margin: 1rem 0;
+        height: 8.125rem;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0.5rem 1rem #4b556505;
+        border-radius: 0.625rem;
+        opacity: 1;
+
+        .request-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .description_icon {
+                padding: 0.625rem;
+                color: #0086c9;
+                background-color: #e0f2fe;
+                border-radius: 50px;
+                margin-right: 0.625rem;
+            }
+
+            .request-details {
+                flex: 1;
+
+                .request-title {
+                    font: normal 0.875rem/1.25rem "Inter";
+                    color: #4b5565;
+                }
+
+                .request-subtitle {
+                    font: normal 1rem/1.5rem "Poppins";
+                    margin: 0;
+                    color: #121926;
+                }
+            }
+
+            .status {
+                font: normal 0.875rem/1.25rem "Archivo";
+                padding: 0.625rem 1.25rem;
+                margin-right: 1.5625rem;
+                background-color: #ffecb3;
+                color: #dc6803;
+                border-radius: 0.875rem;
+            }
+
+            .more-icon {
+                cursor: pointer;
+            }
+        }
+
+        .request-footer {
+            display: flex;
+            align-items: center;
+            margin-top: 0.625rem;
+            margin-left: 1rem;
+
+            .request-author {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #424242;
+                padding: 0.3125rem 0.625rem;
+                border-radius: 0.375rem;
+                margin-left: 2.125rem;
+                margin-right: 0.625rem;
+                font: normal 0.875rem/1.25rem "Inter";
+                letter-spacing: 0px;
+                color: #fcfcfd;
+                width: 5.4375rem;
+                height: 0.875rem;
+            }
+
+            .request-contract {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #e0e0e0;
+                color: #424242;
+                padding: 0.3125rem 0.625rem;
+                border-radius: 0.25rem;
+                width: 9.1875rem;
+                font: normal 0.875rem/1.25rem "Inter";
+            }
+        }
+    }
+}

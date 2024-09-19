@@ -1,0 +1,42 @@
+h3 {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e3e8ef;
+    color: #121926;
+    text-align: center;
+    width: 100%;
+    font: normal 1.25rem/2.375rem "Poppins";
+}
+
+.dialog-content {
+    form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    mat-form-field {
+        padding: 0.625rem;
+        border-radius: 0.625rem;
+        width: 30.25rem;
+
+        mat-label {
+            font: normal 0.875rem/2.375rem "Inter";
+        }
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: red !important;
+    }
+}
+
+.dialog-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancel-button,
+.add-button {
+    font: normal 0.875rem/1.25rem "Inter";
+    padding: 0.625rem 1.25rem;
+    margin-right: 0.5rem;
+}

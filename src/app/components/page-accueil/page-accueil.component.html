@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="header">
+        <div class="title-header">
+            <h2>Liste des demandes</h2>
+            <p>Gérer les demandes d'autorisation de travaux.</p>
+        </div>
+        <button mat-raised-button color="primary" class="add-button" (click)="createRisk()">
+            <mat-icon>add</mat-icon> Ajouter
+        </button>
+    </div>
+
+
+
+    @for (item of manageList; track $index) {
+    <mat-card class="request-card">
+        <div class="request-header">
+            <mat-icon class="description_icon">description</mat-icon>
+            <div class="request-details">
+                <span class="request-title">Demande d'autorisation de travaux</span>
+                <h3 class="request-subtitle">{{item.work}}</h3>
+            </div>
+            <span class="status">Statut</span>
+
+            <mat-icon class="more-icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="updateRisk(item)">
+                    <mat-icon>edit</mat-icon>
+                    <span>Modifier</span>
+                </button>
+                <button mat-menu-item (click)="deleteRisk(item)">
+                    <mat-icon>delete</mat-icon>
+                    <span>Supprimer</span>
+                </button>
+            </mat-menu>
+        </div>
+
+        <div class="request-footer">
+            <span class="request-author">{{item.user}}</span>
+            <span class="request-contract">Contrat {{item.contract}}</span>
+        </div>
+    </mat-card>
+
+    }
+</div>
